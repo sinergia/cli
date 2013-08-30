@@ -1,14 +1,12 @@
 <?php
 
-use Sinergia\Package\App;
+use Sinergia\Cli\App;
 
 class AppTest extends PHPUnit_Framework_Testcase
 {
     public function testApp()
     {
         $app = new App();
-        $msg = $app->run();
-        $this->assertEquals('Hello App', $msg);
     }
 
     public function testFoo()
