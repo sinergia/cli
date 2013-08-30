@@ -1,9 +1,10 @@
 {
-    "name": "vendor/project",
+    "name": "sinergia/package",
     "version": "0.0.1",
-    "description": "Project Description",
+    "description": "Sinergia Library",
     "license": "MIT",
     "type": "library",
+    "keywords": ["sinergia", "library"],
     "minimum-stability": "dev",
     "bin": [],
 
@@ -13,19 +14,19 @@
             "email": "marcos.neves@gmail.com"
         }
     ],
-    
+
     "autoload": {
         "psr-0": {
-            "": "src/"
+            "Sinergia\\Package\\": ""
         },
         "classmap": [],
         "files": []
     },
-    
+
     "require": {
         "php": ">=5.3.7"
     },
-    
+
     "config": {
         "preferred-install": "dist"
     },
