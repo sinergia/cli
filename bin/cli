@@ -1,10 +1,1 @@
-#!/usr/bin/env php -dphar.readonly=0
-<?php
-
-require_once __DIR__ . '/../vendor/autoload.php';
-
-$app = new Sinergia\Cli\App();
-
-$app->setup();
-
-$app->run();
+cli.php
