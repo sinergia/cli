@@ -103,12 +103,14 @@ class App extends Application
     protected function loadComposer($file)
     {
         $json = file_get_contents($file);
+
         return json_decode($json, true);
     }
 
     protected function getRoot()
     {
         $entry = $_SERVER['argv'][0];
+
         return dirname(dirname($entry));
     }
 

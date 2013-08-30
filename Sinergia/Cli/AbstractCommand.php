@@ -3,9 +3,7 @@
 namespace Sinergia\Cli;
 
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 abstract class AbstractCommand extends Command
@@ -30,12 +28,14 @@ abstract class AbstractCommand extends Command
     protected function autoName()
     {
         $namespaces = explode("\\", get_called_class());
+
         return substr(strtolower(end($namespaces)), 0, -7);
     }
 
     protected function autoDescription()
     {
         $r = new \ReflectionClass(get_called_class());
+
         return trim($r->getDocComment(), "/* \r\n");
     }
 
