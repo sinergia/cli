@@ -1,0 +1,8 @@
+[
+    {
+        "name": "<name>.phar",
+        "sha1": "0809660c1527daae1665806a6b3db157b36f621d",
+        "url": "https://github.com/<username>/<package>/releases/download/<version>/<name>-<version>.phar",
+        "version": "<version>"
+    }
+]

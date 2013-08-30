@@ -1,7 +1,7 @@
 {
-    "name": "sinergia/package",
+    "name": "sinergia/cli",
     "version": "0.0.1",
-    "description": "Sinergia Library",
+    "description": "Sinergia Cli",
     "license": "MIT",
     "type": "library",
     "keywords": ["sinergia", "library"],
@@ -17,14 +17,17 @@
 
     "autoload": {
         "psr-0": {
-            "Sinergia\\Package\\": ""
+            "Sinergia\\Cli\\": ""
         },
         "classmap": [],
         "files": []
     },
 
     "require": {
-        "php": ">=5.3.7"
+        "php": ">=5.3.7",
+        "symfony/console": "*",
+        "stecman/symfony-console-completion": "*",
+        "kherge/amend": "*"
     },
 
     "config": {

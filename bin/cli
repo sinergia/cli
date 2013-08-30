@@ -3,5 +3,8 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$app = new Sinergia\Package\App();
-echo $app->run();
+$app = new Sinergia\Cli\App();
+
+$app->setup();
+
+$app->run();
