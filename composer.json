@@ -1,0 +1,36 @@
+{
+    "name": "vendor/project",
+    "version": "0.0.1",
+    "description": "Project Description",
+    "license": "MIT",
+    "type": "library",
+    "minimum-stability": "dev",
+    "bin": [],
+
+    "authors": [
+        {
+            "name": "Marcos Neves",
+            "email": "marcos.neves@gmail.com"
+        }
+    ],
+    
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        },
+        "classmap": [],
+        "files": []
+    },
+    
+    "require": {
+        "php": ">=5.3.7"
+    },
+    
+    "config": {
+        "preferred-install": "dist"
+    },
+
+    "scripts": {
+        "post-install-cmd": ["wget http://pear.phpunit.de/get/phpunit.phar", "chmod +x phpunit.phar"]
+    }
+}
