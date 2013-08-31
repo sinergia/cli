@@ -68,6 +68,6 @@ abstract class AbstractCommand extends Command
 
     protected function LF()
     {
-        $this->out->writeln(PHP_EOL);
+        $this->out->writeln("");
     }
 }
