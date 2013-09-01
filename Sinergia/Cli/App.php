@@ -15,10 +15,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 class App extends Application
 {
     protected $defaultCommandName = 'usage';
+    protected $root;
 
-    public static function cli()
+    public static function cli($root)
     {
         $app = new static;
+        $app->setRoot($root);
         $app->setup();
         $app->run();
     }
@@ -109,9 +111,12 @@ class App extends Application
 
     protected function getRoot()
     {
-        $entry = $_SERVER['argv'][0];
+        return $this->root;
+    }
 
-        return dirname(dirname($entry));
+    protected function setRoot($dir)
+    {
+        $this->root = $dir;
     }
 
     protected function getComposerPath()

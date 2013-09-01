@@ -3,4 +3,4 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Sinergia\Cli\App::cli();
+Sinergia\Cli\App::cli(dirname(__DIR__));
