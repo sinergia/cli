@@ -77,4 +77,9 @@ abstract class AbstractCommand extends Command
     {
         $this->out->writeln("");
     }
+
+    protected function isVerbose($level = OutputInterface::VERBOSITY_VERBOSE)
+    {
+        return $this->out->getVerbosity() >= $level;
+    }
 }
