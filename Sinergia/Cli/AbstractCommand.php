@@ -18,8 +18,15 @@ abstract class AbstractCommand extends Command
      */
     protected $in;
 
+    /**
+     * Custom Aliases
+     * @var array
+     */
+    protected $aliases = array();
+
     protected function configure()
     {
+        $this->setAliases($this->aliases);
         $this
             ->setName($this->autoName())
             ->setDescription($this->autoDescription());
